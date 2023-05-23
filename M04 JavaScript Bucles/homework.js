@@ -152,16 +152,18 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   if (num % 3 ===0){
+
+   if( num % 3=== 0 &&  num % 5=== 0 ){
+      return 'fizzbuzz';
+   }
+   
+   else if (num % 3 ===0){
       return 'fizz';
    } 
    else if( num % 5 ===0){
       return 'buzz';
-
-   } else if( num % 3=== 0 &&  num % 5=== 0 ){
-      return 'fizzbuzz';
    }
-   else{
+    else {
       return false;
    }
 }
@@ -203,11 +205,12 @@ function esPrimo(num) {
    if (num <=1){
       return false;
    }
-    for(i=2; i<num; i++){
-      if (num % 1 === 0)
+   
+   for(i=2; i<num; i++){
+      if (num % i === 0)
       return false;
-    }
-    return true;
+   }
+   return true;
 
 }
 
@@ -243,6 +246,7 @@ function doWhile(num) {
    var i= 0;
 
    do {
+      i=i+1;
       num= num +5;
 
    } while (i<8)
